@@ -1,0 +1,124 @@
+html, body {
+    font-family: 'Montserrat', sans-serif; /* Default font */
+    font-weight: 200; /* Very light font weight */
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: #f8f1f8; /* Initial background color */
+}
+
+header, footer {
+    font-family: 'Montserrat', sans-serif; /* Ensure header and footer use the same font */
+    color: #4d4c4c;
+    padding: 1rem;
+    font-weight: 200; /* Very light font weight */
+}
+
+img {
+    height: auto;
+}
+
+main {
+    display: flex; /* Changed to flex to align items side by side */
+    gap: 1rem;
+    padding: 1rem;
+    opacity: 0; /* Initially hide the content */
+    animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in animation */
+}
+
+h2 {
+    color: #4d4c4c;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally within the container */
+    justify-content: space-between; /* Space between content and image */
+    align-items: flex-start; /* Align items to the top */
+    gap: 1rem; /* Adds space between the image and the content */
+}
+
+.rounded-photo {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    max-width: 450px;
+    height: auto;
+    margin: 0; /* Removes margin */
+    border: none; /* Removes border */
+    margin-bottom: 7rem;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #4d4c4c;
+    background-color: rgb(248, 235, 233); /* Same as background color */
+    text-decoration: none;
+    border-radius: 20px; /* Rounded edges */
+    border: 2px solid #4d4c4c; /* Border color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4d4c4c; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    transition: margin-left 0.3s ease;
+}
+
+.button:hover .arrow {
+    margin-left: 1rem;
+}
+
+#fact-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: inline-block;
+    text-align: center;
+}
+
+#fact {
+    font-size: 1.2rem;
+}
+
+button#getFact {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add space below the button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure the button is an inline-block element */
+    max-width: 200px; /* Set a maximum width for the button */
+    width: auto; /* Allow the button to adjust its width automatically */
+}
+
+button#getFact:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
